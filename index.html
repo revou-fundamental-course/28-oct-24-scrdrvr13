@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\style.css"
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\script.js"></script>
 </head>
 <body>
     <main>
@@ -20,10 +21,24 @@
 
         <form>
             <div>
-                <label for="berat-badan">Berat Badan:</label>
-                <input id="berat-badan" type="number">
+                <input type="radio" id="Pria" name="jenis-kelamin" value="Pria"><br>
+                <label for="Pria">Pria</label>
+                <input type="radio" id="Wanita" name="jenis-kelamin" value="Wanita">
+                <label for="Wanita">Wanita</label>
             </div>
 
+            <div>
+                <label for="berat-badan">Berat Badan(kg)</label>
+                <input id="berat-badan" type="number">
+            </div>
+            <div>
+                <label for="berat-badan">Usia(Tahun)</label>
+                <input id="berat-badan" type="number">
+            </div>
+            <div>
+                <label for="berat-badan">Tinggi Badan(cm)</label>
+                <input id="berat-badan" type="number">
+            </div>
             <button>Hitung BMI</button>
             <button>Reset</button>
         </form>
