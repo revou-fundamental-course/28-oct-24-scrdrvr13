@@ -3,46 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\style.css">
-    <script src="js\script.js"></script>
+    
 </head>
 <body>
     <main>
         <!-- Section Form -->
-     <section>
+     <section id="section-1">
         <header>
             <h1>Kalkulator BMI</h1>
+            <script src="js\script.js"></script>
         </header>
 
         <article>
             <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
         </article>
 
-        <form>
+        <form onsubmit="kalkulatorBmi(event)">
+            <!-- Pilihan Jenis Kelamin -->
+            <p><b>Jenis Kelamin</b></p>
             <div>
-                <input type="radio" id="Pria" name="jenis-kelamin" value="Pria"><br>
-                <label for="Pria">Pria</label>
+                <input type="radio" id="Pria" name="jenis-kelamin" value="Pria" required>
+                <label for="Pria"><b>Pria</b></label>
                 <input type="radio" id="Wanita" name="jenis-kelamin" value="Wanita">
-                <label for="Wanita">Wanita</label>
+                <label for="Wanita"><b>Wanita</b></label>
             </div>
 
+            <!-- Input Berat Badan -->
             <div>
-                <label for="berat-badan">Berat Badan(kg)</label>
-                <input id="berat-badan" type="number">
+                <label for="berat-badan"><b>Berat Badan</b>(kg)</label><br>
+                <input id="berat-badan" type="number" placeholder="Masukkan Berat Badan" required>
             </div>
+
+            <!-- Input Usia -->
             <div>
-                <label for="berat-badan">Usia(Tahun)</label>
-                <input id="berat-badan" type="number">
+                <label for="usia"><b>Usia(Tahun)</b></label><br>
+                <input id="usia" type="number" placeholder="Masukkan Usia" required>
             </div>
+
+            <!-- Input Tinggi Badan -->
             <div>
-                <label for="berat-badan">Tinggi Badan(cm)</label>
-                <input id="berat-badan" type="number">
+                <label for="tinggi-badan"><b>Tinggi Badan(cm)</b></label><br>
+                <input id="tinggi-badan" type="number" placeholder="Masukkan Tinggi Badan" required>
             </div>
-            <button>Hitung BMI</button>
-            <button>Reset</button>
+            <button type="submit">Hitung BMI</button>
+            <button type="reset">Reset</button>
         </form>
-
+            <!-- Artikel -->
         <header>
             <h2>Keunggulan Fitur</h2>
         </header>
@@ -60,26 +68,39 @@
         </articel>
      </section>
     <!-- Section Result -->
-     <section>
+     <section id="section-2">
         <header>
             <h1>Hasil</h1>
         </header>
 
     <!-- Hasil Kalkulasi -->
-        <section>
-
+        <section id="hasil-kalkulasi">
+            <div class="kategori" id="kategori"></div>
+            <div class="nilai" id="nilai-bmi"></div>
+            <div class="penjelasan" id="penjelasan"></div>
+            
         </section>
+    
 
-    <!-- Info Dari Hasil -->
         <articel>
-
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran anda terkait dengan berat badan anda.</p>
         </articel>
+
+
+
+        <div class="app">
+            <p>Download Aplikasi</p>
+            <a href="https://play.google.com/store/apps/details?id=com.splendapps.bmicalc"><img src="asset\Google_Play_Store_badge_EN.svg.png"></a>
+            <a href="https://apps.apple.com/us/app/bmi-calculator-weight-analyze/id6502627077"><img src="asset\Download_on_the_App_Store_Badge.svg.png"></a>
+           
+        </div>
+
 
      </section>
     </main>
 
     <footer>
-        <span>Made by Arif HIdayatulloh</span>
+        <span>Made by Arif Hidayatulloh</span>
     </footer>
 </body>
 </html>

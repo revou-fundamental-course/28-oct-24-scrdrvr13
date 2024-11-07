@@ -8,3 +8,52 @@ main {
 footer {
     text-align: center;
 }
+
+form {
+    margin-left: 20px;
+}
+
+input {
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+
+#hasil-kalkulasi {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+button {
+    background-color: cyan;
+    border-radius: 4px;
+}
+
+
+input#berat-badan, #usia, #tinggi-badan{
+    width: 90%
+
+}
+
+.nilai {
+    text-align: center;
+    margin: 30px;
+    font-size: xx-large;
+}
+
+.app {
+    text-align: center;
+}
+img {
+    width: 150px;
+    height: 50px;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+    
+}
